@@ -1,0 +1,24 @@
+name: hikey-snappy-gadget
+summary: HiKey board support package
+description: Support files for booting the HiKey board
+version: 0.1
+type: gadget
+architectures:
+    - arm64
+
+immutable-config:
+    - ubuntu-core/autopilot*
+
+gadget:
+  branding:
+    name: HiKey
+    subname: HiKey
+
+  hardware:
+    platform: hi6220
+    architecture: arm64
+    partition-layout: minimal
+    bootloader: u-boot
+    boot-assets:
+      files:
+          - path: uboot.env
